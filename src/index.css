@@ -76,3 +76,14 @@
 .bell{
   background-image: url('../public/images/bell.png');
 }
+
+.cards::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+.cards::-webkit-thumb {
+  background-color: #0F0B38 ;
+  width: 10px;
+}
+
