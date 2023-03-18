@@ -29,26 +29,50 @@
     border-radius: 5px;
     text-align: center;
 }
+.title2 {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 85px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    background: linear-gradient(271.88deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    text-shadow: 0 5px 12px rgba(6, 5, 19, 0.25);
+    border-radius: 5px;
+}
+.textShadow{
+  text-shadow: 0px 4px 20px rgba(1, 143, 255, 0.15);
+}
+.triangleOrange{
+  background-image: url('../public/images/triangle\ orange.png');
+  position: absolute;
+width: 67.14px;
+height: 67.14px;
+background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reactangleblue{
+  background-image: url('../public/images/Rectangle\ blue.png');
+  position: absolute;
+width: 60px;
+height: 60px;
+background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .borderline{
   border: 2px solid #1288E8;
 }
 .borderline2{
   border: 1px solid #1288E8;
-}
-.overview{
-  background-image: url('../public/images/overview.png');
-}
-.wallet{
-  background-image: url('../public/images/wallet\ logo.png');
-}
-.trans{
-  background-image: url('../public/images/trans\ logo.png');
-}
-.exchange{
-  background-image: url('../public/images/exchange\ logo.png');
-}
-.market{
-  background-image: url('../public/images/market\ logo.png');
 }
 .grey{
   fill: #616A8B;
@@ -75,4 +99,31 @@
 }
 .bell{
   background-image: url('../public/images/bell.png');
+}
+.bgback{
+  background-image: url('../public/images/wave\ back.png');
+
+}
+.bgtop{
+  background-image: url('../public/images/wave\ top.png');
+
+}
+.triangleBlue {
+    background-image: url("../public/images/triangle\ blue.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  background-size: cover;
+}
+.chel{
+  background-image: url('../public/images/chel.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lock{
+  background-image: url('../public/images/lock.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
