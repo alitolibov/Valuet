@@ -26,7 +26,7 @@ const Login = () => {
                <div className="borderline2 w-[35px] h-[35px] rounded-full flex items-center justify-center">
                   <div className="lock w-[13.5px] h-[13.5px]"></div>
                </div>
-               <input type={eye ? 'text' : 'password'} name="password" placeholder="Password" className="bg-transparent w-[80%] outline-none text-[#fff] font-roboto"/>
+               <input type={eye ? 'text' : 'password'} name="password" placeholder="Password" className="bg-transparent w-[74%] outline-none text-[#fff] font-roboto"/>
                <div className="" onClick={() => setEye(!eye)}>
                {eye ? <RemoveRedEyeIcon sx={{filter: 'invert(100%)', cursor: 'pointer'}}/> : <VisibilityOffIcon sx={{filter: 'invert(100%)', cursor: 'pointer'}}/>}
                </div>
