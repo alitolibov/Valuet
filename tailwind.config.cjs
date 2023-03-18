@@ -20,7 +20,8 @@ module.exports = {
 
       },
       dropShadow: {
-        aside: ['0px -5px 25px rgba(0, 3, 32, 0.5)']
+        aside: ['0px -5px 25px rgba(0, 3, 32, 0.5)'],
+        loginShadow: ['0px 25px 25px rgba(0, 3, 32, 0.5)']
       },
       borderRadius: {
         asideRadius: ['8px 0px 0px 8px']
