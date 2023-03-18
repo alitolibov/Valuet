@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Layout from "./Layout/Layout"
 import Wallets from "./page/Wallets"
+import Overview from "./pages/Overview"
 import Login from "./pages/Login"
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="sign" element={<Login />} />
         <Route path="/" element={<Layout />}>
-          <Route path="/" index element={<center><h1>Overview</h1></center>} />
+          <Route path="/" index element={ <Overview/> } />
           <Route path="wallets" index element={<Wallets />} />
           <Route path="transictions" index element={<center><h1>Transictions</h1></center>} />
           <Route path="exchange" index element={<center><h1>Exchange</h1></center>} />
