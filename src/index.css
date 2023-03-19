@@ -156,3 +156,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.transaction::-webkit-scrollbar {
+  background-color: transparent;
+}
