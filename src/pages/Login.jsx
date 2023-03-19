@@ -1,6 +1,7 @@
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -33,7 +34,7 @@ const Login = () => {
                </div>
                <div className="flex items-center gap-[32px] mx-auto mb-[103px]">
                <button className='w-[105px] h-[42px] bg-btnBg rounded-[8px] text-[#949EC0] font-[700] font-roboto transition-[500ms] hover:invert-[3%]'>SIGN UP</button>
-               <button className='w-[105px] h-[42px] bg-btnBg2 rounded-[8px] text-[#ffffff] font-[700] font-roboto transition-[500ms] hover:invert-[5%]'>SIGN IN</button>
+               <Link to={'/'} className='w-[105px] flex items-center justify-center h-[42px] bg-btnBg2 rounded-[8px] text-[#ffffff] font-[700] font-roboto transition-[500ms] hover:invert-[5%]'>SIGN IN</Link>
                </div>
                <p className="text-[#5FB2FF] text-center underline underline-offset-1 font-roboto cursor-pointer transition-[500ms] hover:invert-[5%]">Forgot your password?</p>
             </div>
