@@ -1,9 +1,20 @@
+import { Box } from "@mui/material";
+
 const WalletCards = ({ bgColor, img, text, roundColor, ChartImg }) => {
 
-    console.log(bgColor, img, text, roundColor);
+    // console.log(bgColor, img, text, roundColor);
+
+
     return (
         <>
-    <div className={`min-w-[300px] w-[300px] h-[150px] bg-${bgColor} rounded-[12px] px-5 py-3 flex-col justify-between select-none`}>
+            <Box  sx={{
+                width: 300,
+                height: 150,
+                minWidth: 300,
+                borderRadius: '12px',
+                padding: '3px 12px',
+                background: bgColor
+            }}>
                 <div className="flex justify-between">
                     <p className="text-[14px] font-medium text-[white]">{text}</p>
                     <div className="flex">
@@ -18,7 +29,7 @@ const WalletCards = ({ bgColor, img, text, roundColor, ChartImg }) => {
                 </div>
 
                 <img src={ChartImg} className="" />
-            </div>
+            </Box>
         </>
     );
 }
