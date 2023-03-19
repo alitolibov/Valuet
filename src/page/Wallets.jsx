@@ -78,9 +78,9 @@ const Wallets = (props) => {
             <div className="my-[20px]">
                 <div className="cards flex gap-[20px] overflow-x-auto  ">
                     <div className="min-w-[300px] w-[300px] h-[150px] bg-[#0F0B38] rounded-[12px]"></div>
-                    <WalletCards bgColor={'violet'} img={"/images/BitCoin.svg"} text='BitCoin' roundColor={'#644696'} ChartImg={'images/chartImgViolet.svg'} />
-                    <WalletCards bgColor={'darkBLue'} img={"/images/Ethereum.svg"} text='Ethereum' roundColor={'#5454BD'} ChartImg={'images/chartImgBlue.svg'} />
-                    <WalletCards bgColor={'violet'} img={"/images/PeerCoin.svg"} text='PeerCoin' roundColor={'#6CBA60'} ChartImg={'images/chartImgGreen.svg'} />
+                    <WalletCards bgColor={'linear-gradient(237.07deg, rgba(96, 67, 146, 0.5) -8.06%, rgba(15, 11, 56, 0.5) 96.63%)'} img={"/images/BitCoin.svg"} text='BitCoin' roundColor={'#644696'} ChartImg={'images/chartImgViolet.svg'} />
+                    <WalletCards bgColor={'linear-gradient(237.07deg, #6162D6 -8.06%, #0F0B38 96.63%)'} img={"/images/Ethereum.svg"} text='Ethereum' roundColor={'#5454BD'} ChartImg={'images/chartImgBlue.svg'} />
+                    <WalletCards bgColor={'linear-gradient(237.07deg, #72EB38 -8.06%, #0F0B38 96.63%)'} img={"/images/PeerCoin.svg"} text='PeerCoin' roundColor={'#6CBA60'} ChartImg={'images/chartImgGreen.svg'} />
                 </div>
             </div>
 
