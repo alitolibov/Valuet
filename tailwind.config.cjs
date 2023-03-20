@@ -19,7 +19,10 @@ module.exports = {
         violet: ['linear-gradient(237.07deg, rgba(96, 67, 146, 0.5) -8.06%, rgba(15, 11, 56, 0.5) 96.63%)'],
         darkBLue: ['linear-gradient(237.07deg, #6162D6 -8.06%, #0F0B38 96.63%)'],
         btnBg: ['linear-gradient(88.43deg, #2F3453 11.5%, #242845 76.7%)'],
-        btnBg2: ['linear-gradient(271.88deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);']
+        btnBg2: ['linear-gradient(271.88deg, #3887FE 4.26%, #3BA0FF 51.37%, #5FB2FF 99.01%);'],
+        darkBLue2: ['linear-gradient(180deg, rgba(27, 18, 78, 0.2) 0%, #0F0B38 93.37%)'],
+        scrollBg:['linear-gradient(180deg, rgba(15, 11, 56, 0) 8.84%, #0F0B38 100%)'],
+        bg1:['linear-gradient(237.07deg, #604392 -8.06%, #0F0B38 96.63%)']
       },
       dropShadow: {
         aside: ['0px -5px 25px rgba(0, 3, 32, 0.5)'],
