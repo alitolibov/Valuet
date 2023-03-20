@@ -52,7 +52,12 @@
 .textShadow {
   text-shadow: 0px 4px 20px rgba(1, 143, 255, 0.15);
 }
-
+.scrollNone{
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
 .triangleOrange {
   background-image: url('../public/images/triangle\ orange.png');
   position: absolute;
@@ -72,7 +77,9 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.bg100{
+  background-size: 100%;
+}
 .borderline {
   border: 2px solid #1288E8;
 }
