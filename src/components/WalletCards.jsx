@@ -15,7 +15,7 @@ const WalletCards = ({ bgColor, img, text, roundColor, ChartImg }) => {
                 padding: '3px 12px',
                 background: bgColor
             }}>
-                <div className="flex justify-between">
+                <div className="flex justify-between py-3 ">
                     <p className="text-[14px] font-medium text-[white]">{text}</p>
                     <div className="flex">
                         <div>
