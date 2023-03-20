@@ -50,7 +50,7 @@ function Overview() {
                 <div className="h-full w-[240px] px-6 py-4 bg-darkBLue2">
                     <div className=" flex justify-between">
                         <h1 className="text-sm font-bold">Spending</h1>
-                        <select className=" text-white  bg-transparent" name="" id="">
+                        {/* <select className=" text-white  bg-transparent" name="" id="">
                             <option className=" text-black" value="January">January</option>
                             <option className=" text-black" value="February ">February </option>
                             <option className=" text-black" value="March ">March </option>
@@ -63,8 +63,8 @@ function Overview() {
                             <option className=" text-black" value="October ">October </option>
                             <option className=" text-black" value="November ">November </option>
                             <option className=" text-black" value="December ">December </option>
-                        </select>
-                        
+                        </select> */}
+                        <SelectUM/>
                     </div>
                     <div className=" mt-8">
                         <p className=" text-base font-bold">$ 5,743.35</p>
@@ -83,35 +83,9 @@ function Overview() {
                     <div className="flex justify-between">
                         <div className="flex gap-6">
                             <h1 className="text-sm font-bold">Market</h1>
-                            <select className=" text-white  bg-transparent" name="" id="">
-                                <option className=" text-black" value="January">January</option>
-                                <option className=" text-black" value="February ">February </option>
-                                <option className=" text-black" value="March ">March </option>
-                                <option className=" text-black" value="April ">April </option>
-                                <option className=" text-black" value="May ">May </option>
-                                <option className=" text-black" value="June ">June </option>
-                                <option className=" text-black" value="July ">July </option>
-                                <option className=" text-black" value="August ">August </option>
-                                <option className=" text-black" value="September ">September </option>
-                                <option className=" text-black" value="October ">October </option>
-                                <option className=" text-black" value="November ">November </option>
-                                <option className=" text-black" value="December ">December </option>
-                            </select>
+                            <SelectUM/>
                         </div>
-                        <select className=" text-white  bg-transparent" name="" id="">
-                            <option className=" text-black" value="January">January</option>
-                            <option className=" text-black" value="February ">February </option>
-                            <option className=" text-black" value="March ">March </option>
-                            <option className=" text-black" value="April ">April </option>
-                            <option className=" text-black" value="May ">May </option>
-                            <option className=" text-black" value="June ">June </option>
-                            <option className=" text-black" value="July ">July </option>
-                            <option className=" text-black" value="August ">August </option>
-                            <option className=" text-black" value="September ">September </option>
-                            <option className=" text-black" value="October ">October </option>
-                            <option className=" text-black" value="November ">November </option>
-                            <option className=" text-black" value="December ">December </option>
-                        </select>
+                        <SelectUM/>
                     </div>
 
                 </div>
