@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Aside = () => {
 
@@ -50,10 +50,10 @@ const Aside = () => {
             <div className="borderline2 w-[21px] h-[21px] rounded-full"></div>
             <p className="font-openSans font-[600] text-[14px] text-[#616A8B] capitalize">Mike Jakson</p>
          </div>
-         <div className="flex gap-[24px] items-center cursor-pointer">
+         <Link to={'/sign'} className="flex gap-[24px] items-center cursor-pointer">
             <div className="exit w-[21px] h-[16px] bg-contain bg-no-repeat"></div>
             <p className="font-openSans font-[600] text-[14px] text-[#616A8B] capitalize">Log out</p>
-         </div>
+         </Link>
          </section>
       </aside>
    </>
