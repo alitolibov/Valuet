@@ -2,11 +2,13 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SignIn from '../components/SignIn';
+import SignUp from '../components/SignUp';
 
 
 const Login = () => {
 
-   const [eye, setEye] = useState(false)
+   const [show, setShow] = useState(true)
 
    return ( 
    <div className="w-full h-[100vh] bg-logBg relative overflow-hidden">
@@ -16,28 +18,11 @@ const Login = () => {
       <div className="flex items-center gap-[259px] mx-auto w-fit mt-[69px]">
          <div className="w-[480px] h-[595px] pt-[82px] px-[50px] rounded-[8px] bg-loginBg drop-shadow-loginShadow">
             <p className="text-[36px] font-[500] font-roboto text-[#fff] text-center mb-[62px]">Welcome!</p>
-            <div className="flex flex-col w-full gap-[26px]">
-               <div className="w-full h-[58px] flex items-center gap-[16px] px-[16px] bg-[#2E3558] rounded-[8px]">
-               <div className="borderline2 w-[35px] h-[35px] rounded-full flex items-center justify-center">
-                  <div className="chel w-[13px] h-[13px]"></div>
-               </div>
-               <input type="text" name="email" placeholder="E-mail or Login" className="bg-transparent w-[80%] outline-none text-[#fff] font-roboto"/>
-               </div>
-               <div className="w-full h-[58px] flex items-center gap-[16px] px-[16px] bg-[#2E3558] rounded-[8px]">
-               <div className="borderline2 w-[35px] h-[35px] rounded-full flex items-center justify-center">
-                  <div className="lock w-[13.5px] h-[13.5px]"></div>
-               </div>
-               <input type={eye ? 'text' : 'password'} name="password" placeholder="Password" className="bg-transparent w-[74%] outline-none text-[#fff] font-roboto"/>
-               <div className="" onClick={() => setEye(!eye)}>
-               {eye ? <RemoveRedEyeIcon sx={{filter: 'invert(100%)', cursor: 'pointer'}}/> : <VisibilityOffIcon sx={{filter: 'invert(100%)', cursor: 'pointer'}}/>}
-               </div>
-               </div>
-               <div className="flex items-center gap-[32px] mx-auto mb-[103px]">
-               <button className='w-[105px] h-[42px] bg-btnBg rounded-[8px] text-[#949EC0] font-[700] font-roboto transition-[500ms] hover:invert-[3%]'>SIGN UP</button>
-               <Link to={'/'} className='w-[105px] flex items-center justify-center h-[42px] bg-btnBg2 rounded-[8px] text-[#ffffff] font-[700] font-roboto transition-[500ms] hover:invert-[5%]'>SIGN IN</Link>
-               </div>
-               <p className="text-[#5FB2FF] text-center underline underline-offset-1 font-roboto cursor-pointer transition-[500ms] hover:invert-[5%]">Forgot your password?</p>
+            <div className="flex flex-col w-full gap-[26px]" style={show ? {marginBottom: '103px'} : {marginBottom: '53px'} }>
+               {show ? <SignIn/> : <SignUp/>}
+               
             </div>
+            {show ? <p onClick={() => setShow(false)} className="text-[#5FB2FF] text-center underline underline-offset-1 font-roboto cursor-pointer transition-[500ms] hover:invert-[5%]">New a Valuet? Create an account.</p> : <p onClick={() => setShow(true)} className="text-[#5FB2FF] text-center underline underline-offset-1 font-roboto cursor-pointer transition-[500ms] hover:invert-[5%]" id='have'>Already have an account?</p>}
          </div>
          <div className="flex flex-col gap-[20px]">
          <p className="title2 font-raleway">valuet</p>

@@ -2,11 +2,11 @@ import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 import Loading from "./components/Loading"
 import Layout from "./Layout/Layout"
-import Exchange from "./pages/Exchange"
 
 const Overview = lazy(() => import("./pages/Overview"))
 const Wallets = lazy(() => import("./page/Wallets"))
 const Login = lazy(() => import("./pages/Login"))
+const Exchange = lazy(() => import("./pages/Exchange"))
 
 
 
