@@ -9,19 +9,20 @@ export const data = {
 	datasets: [
 		{
 			label: "",
-			coin: ['Ethereum', 'Bitcoin', 'Dash'],
-			data: [18, 64, 19],
+			coin: ['Ethereum', 'Bitcoin', 'Dash', 'USD'],
+			data: [18, 64, 19, 29],
 			backgroundColor: [
 				"rgba(255, 206, 86, 1)",
 
 				"rgba(54, 162, 235, 1)",
 				"#ffffff",
+				"red",
 			],
 			borderColor: [
 				"rgba(255, 206, 86, 1)",
 				"rgba(54, 162, 235, 1)",
 				"#ffffff",
-
+				"red"
 			],
 			borderWidth: 1,
 		},

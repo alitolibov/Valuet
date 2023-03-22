@@ -46,7 +46,6 @@ function Overview() {
 					<div className="mt-6">
 						{Data.map((item, inx) => (
 							<BalanceDeteils key={inx}  num={item} color={CoinColor[Count + Data.indexOf(item)]} text={CoinBal[Count + Data.indexOf(item)]} />
-							
 						) )
 						}
 
