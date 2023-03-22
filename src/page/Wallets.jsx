@@ -16,18 +16,17 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export const options = {
     responsive: true,
     plugins: {
-      legend: {
-        position: 'top' ,
-      },
-      title: {
-        display: false,
-        text: 'Chart.js Bar Chart',
-      },
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: false,
+            text: 'Chart.js Bar Chart',
+        },
     },
-  };
+};
 
 export const data = {
-    labels: ['Ethereum', 'Bitcoin', 'Dash'],
     datasets: [
         {
             label: '# of Votes',
@@ -127,8 +126,11 @@ const Wallets = (props) => {
 
             <div className="my-[20px]">
                 <div className="cards flex gap-[20px] overflow-x-auto  ">
-                    <div className="min-w-[300px] w-[300px] h-[150px] bg-[#0F0B38] rounded-[12px]">
-                        <Doughnut options={options} data={data} />
+                    <div className="min-w-[300px] w-[300px] flex  h-[150px] bg-[#0F0B38] rounded-[12px]">
+                        <div className='w-[150px]'>
+                            <Doughnut options={options} data={data} />
+                        </div>
+                        <div></div>
                     </div>
                     <WalletCards bgColor={'linear-gradient(237.07deg, rgba(96, 67, 146, 0.5) -8.06%, rgba(15, 11, 56, 0.5) 96.63%)'} img={"/images/BitCoin.svg"} text='BitCoin' roundColor={'#644696'} ChartImg={'images/chartImgViolet.svg'} />
                     <WalletCards bgColor={'linear-gradient(237.07deg, #6162D6 -8.06%, #0F0B38 96.63%)'} img={"/images/Ethereum.svg"} text='Ethereum' roundColor={'#5454BD'} ChartImg={'images/chartImgBlue.svg'} />
@@ -136,9 +138,9 @@ const Wallets = (props) => {
                 </div>
             </div>
 
-            <div className='flex justify-between max-w-[1280px] min-w-[1280px]' >
+            <div className='flex justify-between max-w-[1280px] min-w-[1180px] gap-[20px]' >
 
-                <div className='w-[500px] h-[400px] bg-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)] shadow-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)]'>
+                <div className='w-[500px] h-[350px] bg-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)] shadow-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)]'>
                     <ChartComponent {...props} data={initialData}></ChartComponent>
                 </div>
 
