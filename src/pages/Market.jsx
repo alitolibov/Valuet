@@ -71,7 +71,7 @@ const arr = [
       bg2: '#4185D5',
       frame: 'Frame8',
       proc: '-1.13%',
-      line: '#00E8AC'
+      line: '#F35050'
    },
    {
       id: 9,

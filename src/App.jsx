@@ -2,12 +2,12 @@ import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 import Loading from "./components/Loading"
 import Layout from "./Layout/Layout"
-import Market from "./pages/Market"
 
 const Overview = lazy(() => import("./pages/Overview"))
 const Wallets = lazy(() => import("./page/Wallets"))
 const Login = lazy(() => import("./pages/Login"))
 const Exchange = lazy(() => import("./pages/Exchange"))
+const Market = lazy(() => import("./pages/Market"))
 
 
 
