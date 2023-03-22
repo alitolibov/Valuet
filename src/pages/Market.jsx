@@ -88,8 +88,8 @@ const arr = [
 const Market = () => {
    return ( 
    <>
-   <p className="font-openSans font-semibold text-[18px] capitalize text-[#fff] my-[16px]">Market</p>
-   <div className="grid grid-cols-3 gap-[24px]">
+   <p className="font-openSans font-semibold text-[18px] capitalize text-[#fff] mt-[28px] mb-[16px]">Market</p>
+   <div className="grid grid-cols-3 gap-[24px] mb-[26px]">
       {arr.map(item => <MarketItem key={item.id} {...item} />)}
    </div>
    </>
