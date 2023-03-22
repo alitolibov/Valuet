@@ -49,7 +49,7 @@ export default function MarketChart(props) {
 
 
   return (
-    <LineChart width={300} height={47} data={data}>
+    <LineChart width={330} height={47} data={data}>
       <Line type="number" dataKey="pv" stroke={props.color} strokeWidth={3} />
     </LineChart>
   );
