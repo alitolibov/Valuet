@@ -13,7 +13,7 @@ const MarketItem = (props) => {
                <div className="w-[29px] h-[34px]  bg-contain bg-no-repeat bg-center" style={{backgroundImage: `url("../public/images/${props.frame}.png")`}}></div>
                </div>
             </div>
-            <div className="flex flex-col items-center gap-[1px]">
+            <div className="flex flex-col items-start gap-[1px]">
                <p className="font-openSans font-bold text-[12px] text-[#fff]">{props.name}</p>
                <p className="font-openSans font-bold text-[12px]" style={{color: props.proc[0] === '-' ? '#F35050' : '#00E8AC'}}>{props.proc}</p>
             </div>
