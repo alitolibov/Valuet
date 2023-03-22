@@ -3,13 +3,24 @@ import { useEffect, useState } from "react";
 import CoinCart from "../components/CoinCart";
 import NewsItem from "../components/NewsItem";
 import SelectUM from "../components/SelectUM";
-import { MyPieChart } from "../components/MyPieChart";
+import { data, MyPieChart } from "../components/MyPieChart";
+import MarketChart from "../components/MarketChart";
+import BalanceDeteils from "../components/BalanceDeteils";
 
 
 function Overview() {
 	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+	
+
+	// let Data = data.datasets[0].data
+	// let CoinBal = data.datasets[0].coin
+	// let CoinColor = data.datasets[0].backgroundColor
 	const [Coin, setCoin] = useState(arr);
+	const [Count, setCount] = useState(0);
+	const [Data, setData] = useState(data.datasets[0].data);
+	const [CoinBal, setCoinBal] = useState(data.datasets[0].coin);
+	const [CoinColor, setCoinColor] = useState(data.datasets[0].backgroundColor);
 
 	return (
 		<div className="font-openSans text-white max-w-[1200px]  pt-7">
@@ -29,9 +40,17 @@ function Overview() {
 			<div className="h-[312px] flex gap-4 justify-between mt-6 ">
 				<div className="h-full w-[226px] px-6 py-4  bg-darkBLue2">
 					<h1 className=" text-sm font-bold">Balance</h1>
-                    <div>
-                        <MyPieChart/>
-                    </div>
+					<div className=" h-[146px] flex items-center justify-center mt-3 ">
+						<MyPieChart />
+					</div>
+					<div className="mt-6">
+						{Data.map((item, inx) => (
+							<BalanceDeteils key={inx}  num={item} color={CoinColor[Count + Data.indexOf(item)]} text={CoinBal[Count + Data.indexOf(item)]} />
+							
+						) )
+						}
+
+					</div>
 				</div>
 				<div className="h-full w-[240px] px-6 py-4 bg-darkBLue2">
 					<div className=" flex justify-between">
@@ -61,6 +80,7 @@ function Overview() {
 				</div>
 				<div className=" grid-cols-2 grid gap-4  ">
 					{Coin.slice(0, 4).map((item) => (
+
 						<CoinCart key={item} />
 					))}
 				</div>
