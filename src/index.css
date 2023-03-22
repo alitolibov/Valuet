@@ -208,4 +208,22 @@
 .transaction::-webkit-scrollbar {
   background-color: transparent;
 }
+.backBg {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+.centerBg {
+    width: 55.15px;
+    height: 55.15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #27A9D2;
+}
+
 
