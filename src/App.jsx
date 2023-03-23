@@ -9,6 +9,8 @@ const Wallets = lazy(() => import("./page/Wallets"))
 const Login = lazy(() => import("./pages/Login"))
 const Exchange = lazy(() => import("./pages/Exchange"))
 const Market = lazy(() => import("./pages/Market"))
+const PageTransiction = lazy(() => import("./pages/PageTransiction"))
+
 
 
 
@@ -23,7 +25,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={ <Overview/> } />
           <Route path="wallets" element={<Wallets />} />
-          <Route path="transictions" element={<center><h1>Transictions</h1></center>} />
+          <Route path="transictions" element={<PageTransiction/>} />
           <Route path="exchange" element={<Exchange/> }/>
           <Route path="market" element={<Market/>} />
         </Route>
