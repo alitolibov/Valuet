@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Bitcoin from "../../public/images/Bitcoin.svg";
+// import Bitcoin from "../../public/images/Bitcoin.svg";
 import gridCoin from "../../public/images/Cripta.svg";
 import bitcoinIcon from "../../public/images/bitcoinIcon.svg";
 import Arrow from "../../public/images/Arrow.svg";
@@ -84,7 +84,7 @@ const Exchange = () => {
 										</option>
 									))}
 								</select>
-								<img src={Bitcoin} alt="" />
+								{/* <img src={Bitcoin} alt="" /> */}
 							</div>
 							<input
 								onKeyUp={(e) => setAmount(e.target.value)}
