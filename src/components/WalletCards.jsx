@@ -22,8 +22,8 @@ const WalletCards = ({ bgColor, img, text, roundColor, ChartImg }) => {
                             <p className="text-[16px] text-[white] ">5 248 USD</p>
                             <p className={`text-[12px] text text-[gray] `}>+2,59%</p>
                         </div>
-                        <div className={`w-[44px] h-[44px] ml-[14px] flex fustyfi-center items-center rounded-[100%]`}  style={{background: roundColor }} >
-                            <img className="ml-[12px]" src={img} alt="" />
+                        <div className={`w-[44px] h-[44px] ml-[14px] flex fustyfi-center items-center justify-center rounded-[100%]`}  style={{background: roundColor }} >
+                            <img  src={img} alt="" />
                         </div>
                     </div>
                 </div>

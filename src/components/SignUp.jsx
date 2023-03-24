@@ -19,12 +19,12 @@ const SignUp = () => {
   const onSubmit = (data) => {
     axios.post(import.meta.env.VITE_BASE_URL + "/users", data)
       .then(res => {
-        if (res.status === 201 || res.status === 200) {
-            
+        if(res.status === 201 || res.status === 200){
+          
         }
       })
       .catch(err => toast(err.response.data.message))
-  }
+  } 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -35,7 +35,7 @@ const SignUp = () => {
           />
         </div>
         <input
-          {...register('email', { required: true, minLength: 7 })}
+          {...register('email', {required: true, minLength:7})}
           type="text"
           placeholder="E-mail or Number"
           className="bg-transparent w-[80%] outline-none text-[#fff] font-roboto"
@@ -46,7 +46,7 @@ const SignUp = () => {
           <div className="chel w-[13px] h-[13px]"></div>
         </div>
         <input
-          {...register('name', { required: true, minLength: 2 })}
+          {...register('name' , {required: true, minLength:2})}
           type="text"
           placeholder="Name"
           className="bg-transparent w-[74%] outline-none text-[#fff] font-roboto"
@@ -57,7 +57,7 @@ const SignUp = () => {
           <div className="lock w-[13.5px] h-[13.5px]"></div>
         </div>
         <input
-          {...register('password', { required: true, minLength: 4 })}
+          {...register('password', {required: true, minLength:4})}
           type={eye ? "text" : "password"}
           placeholder="Password"
           className="bg-transparent w-[74%] outline-none text-[#fff] font-roboto"
@@ -75,7 +75,7 @@ const SignUp = () => {
         </div>
       </div>
 
-      <button className="w-full flex items-center justify-center h-[42px] bg-btnBg2 rounded-[8px] text-[#ffffff] font-[700] font-roboto transition-[500ms] hover:invert-[5%]">Registration</button>
+               <button  className="w-full flex items-center justify-center h-[42px] bg-btnBg2 rounded-[8px] text-[#ffffff] font-[700] font-roboto transition-[500ms] hover:invert-[5%]">Registration</button>
 
       {/* <Link
         to={"#"}
