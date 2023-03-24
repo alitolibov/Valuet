@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 import Loading from "./components/Loading"
 import Layout from "./Layout/Layout"
+import { ToastContainer, toast } from 'react-toastify';
 
 const Overview = lazy(() => import("./pages/Overview"))
 const Wallets = lazy(() => import("./page/Wallets"))
@@ -14,8 +15,10 @@ const Market = lazy(() => import("./pages/Market"))
 function App() {
 
   return (
+    
     <div className="w-full h-[100vh] bg-bg ">
       <Suspense fallback={<Loading/>}>
+      <ToastContainer />
       <Routes>
         <Route path="sign" element={<Login />} />
         <Route path="/" element={<Layout />}>
