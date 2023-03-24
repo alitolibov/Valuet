@@ -9,9 +9,12 @@ const Layout = () => {
 	useEffect(() => {
 		let data = JSON.parse(localStorage.getItem('auth_data'))
 
-		
+		let expData = data.authentication.payload.exp * 1000
 
-		if(!data) {
+		let isExpired = Date.now() >= expData
+
+
+		if(!data || isExpired) {
 			navigate('/sign')
 		}
 	}, [])
