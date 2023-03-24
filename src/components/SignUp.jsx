@@ -3,10 +3,10 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import EmailIcon from "@mui/icons-material/Email";
 import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useForm } from "react-hook-form"
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
@@ -18,17 +18,14 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-    axios
-      .post(import.meta.env.VITE_BASE_URL + "/users", data)
-      .then((res) => {
-        if (res.status === 201 || res.status === 200) {
+    axios.post(import.meta.env.VITE_BASE_URL + "/users", data)
+      .then(res => {
+        if(res.status === 201 || res.status === 200){
+          
         }
       })
-      .catch((err) => {
-        toast(err.response.data.message);
-      });
-  };
+      .catch(err => toast(err.response.data.message))
+  } 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -65,7 +62,7 @@ const SignUp = () => {
           <div className="lock w-[13.5px] h-[13.5px]"></div>
         </div>
         <input
-          type={eye ? "text" : "password"}
+type={eye ? "text" : "password"}
           {...register("password", { required: true, minLength: 4 })}
           placeholder="Password"
           className="bg-transparent w-[74%] outline-none text-[#fff] font-roboto"

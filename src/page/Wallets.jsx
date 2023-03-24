@@ -5,6 +5,7 @@ import { BsArrowUp } from 'react-icons/bs'
 import Transaction from '../components/Transaction';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import WalletChart from '../components/WalletChart';
 
 
 
@@ -16,18 +17,17 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export const options = {
     responsive: true,
     plugins: {
-      legend: {
-        position: 'top' ,
-      },
-      title: {
-        display: false,
-        text: 'Chart.js Bar Chart',
-      },
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: false,
+            text: 'Chart.js Bar Chart',
+        },
     },
-  };
+};
 
 export const data = {
-    labels: ['Ethereum', 'Bitcoin', 'Dash'],
     datasets: [
         {
             label: '# of Votes',
@@ -127,19 +127,46 @@ const Wallets = (props) => {
 
             <div className="my-[20px]">
                 <div className="cards flex gap-[20px] overflow-x-auto  ">
-                    <div className="min-w-[300px] w-[300px] h-[150px] bg-[#0F0B38] rounded-[12px]">
-                        <Doughnut options={options} data={data} />
+                    <div className="min-w-[300px] w-[300px] flex  h-[150px] bg-[#0F0B38] rounded-[12px]">
+                        <div className='w-[140px]'>
+                            <Doughnut options={options} data={data} />
+                        </div>
+                        <div className='flex-col  items-center justify-center py-5'>
+                            <div className='flex justify-between w-[140px] text-[white] mb-[10px]'>
+                                <div className='flex items-center'>
+                                    <img className='mt-[5px]' src="/images/whiteDot.svg" alt="" />
+                                    <p className='ml-[5px]'>Ethereum</p>
+                                </div>
+                                <p className='font-medium'>18%</p>
+                            </div>
+                            <div className='flex justify-between w-[140px] text-[white] mb-[10px]'>
+                                <div className='flex items-center'>
+                                    <img className='mt-[5px]' src="/images/blueDot.svg" alt="" />
+                                    <p className='ml-[5px] text-[#018FFF]'>Bitcoin</p>
+                                </div>
+                                <p className='font-medium'>64%</p>
+                            </div>
+                            <div className='flex justify-between w-[140px] text-[white] mb-[10px]'>
+                                <div className='flex items-center'>
+                                    <img className='mt-[5px]' src="/images/yellowDot.svg" alt="" />
+                                    <p className='ml-[5px] '>Dash</p>
+                                </div>
+                                <p className='font-medium text-[#FAD679]'>18%</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <WalletCards bgColor={'linear-gradient(237.07deg, rgba(96, 67, 146, 0.5) -8.06%, rgba(15, 11, 56, 0.5) 96.63%)'} img={"/images/BitCoin.svg"} text='BitCoin' roundColor={'#644696'} ChartImg={'images/chartImgViolet.svg'} />
+                    <WalletCards bgColor={'linear-gradient(237.07deg, rgba(96, 67, 146, 0.5) -8.06%, rgba(15, 11, 56, 0.5) 96.63%)'} img={"/images/bitm.svg"} text='BitCoin' roundColor={'#644696'} ChartImg={'images/chartImgViolet.svg'} />
                     <WalletCards bgColor={'linear-gradient(237.07deg, #6162D6 -8.06%, #0F0B38 96.63%)'} img={"/images/Ethereum.svg"} text='Ethereum' roundColor={'#5454BD'} ChartImg={'images/chartImgBlue.svg'} />
                     <WalletCards bgColor={'linear-gradient(237.07deg, #72EB38 -8.06%, #0F0B38 96.63%)'} img={"/images/PeerCoin.svg"} text='PeerCoin' roundColor={'#6CBA60'} ChartImg={'images/chartImgGreen.svg'} />
                 </div>
             </div>
 
-            <div className='flex justify-between max-w-[1280px] min-w-[1280px]' >
+            <div className='flex justify-between max-w-[1280px] min-w-[1180px] gap-[20px]' >
 
-                <div className='w-[500px] h-[400px] bg-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)] shadow-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)]'>
-                    <ChartComponent {...props} data={initialData}></ChartComponent>
+                <div className='w-[550px] h-[450px] bg-[linear-gradient(176.95deg, rgba(27, 18, 78, 0.2) -32.8%, #0F0B38 88.83%)] ]'>
+                    {/* <ChartComponent {...props} data={initialData}></ChartComponent> */}
+                    <WalletChart />
                 </div>
 
                 <div className='bg-[#0F0B38] px-4 rounded-[10px]'>
