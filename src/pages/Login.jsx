@@ -8,6 +8,10 @@ import SignUp from "../components/SignUp";
 const Login = () => {
 	const [show, setShow] = useState(true);
 
+	function showSignIn() {
+		setShow(true)
+	}
+
 	return (
 		<div className="w-full h-[100vh] bg-logBg relative overflow-hidden">
 			<div className="bgback w-[1338.5px] h-[557px] bg-contain absolute bottom-0 right-0"></div>
@@ -26,7 +30,7 @@ const Login = () => {
 								: { marginBottom: "53px" }
 						}
 					>
-						{show ? <SignIn /> : <SignUp />}
+						{show ? <SignIn /> : <SignUp showSignIn={showSignIn} />}
 					</div>
 					{show ? (
 						<p
